@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "39091dcd-55f9-4e1e-aa19-0a185b7d06f0",
+		"name": "meta-wall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14367062"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://meta-wall-35ii.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"meta-wall-35ii",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Louise\",\n    \"content\": \"hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://meta-wall-35ii.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"meta-wall-35ii",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Louise\",\n    \"content\": \"hello335\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://meta-wall-35ii.onrender.com/posts/664061e0001d3954ca20c8e3",
+					"protocol": "https",
+					"host": [
+						"meta-wall-35ii",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"664061e0001d3954ca20c8e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://meta-wall-35ii.onrender.com/posts/664061e0001d3954ca20c8e3",
+					"protocol": "https",
+					"host": [
+						"meta-wall-35ii",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"664061e0001d3954ca20c8e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post (all)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://meta-wall-35ii.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"meta-wall-35ii",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
