@@ -34,7 +34,7 @@ const requestListener = async(req, res)=>{
       try {
         const data = JSON.parse(body)
         const newPost = await Post.create({
-          content: data.content,
+          content: data.content.trim(),
           name: data.name
         })
         res.writeHead(200, headers)
@@ -66,7 +66,10 @@ const requestListener = async(req, res)=>{
     req.on('end', async () => {
       try {
         const data = JSON.parse(body)
-        await Post.findByIdAndUpdate(id, data)
+        await Post.findByIdAndUpdate(id, {
+          name: data.name,
+          content: data.content.trim()
+        })
         const updatePost = await Post.find({ _id: id })
         res.writeHead(200, headers)
         res.write(JSON.stringify({
