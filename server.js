@@ -58,9 +58,18 @@ const requestListener = async(req, res)=>{
     res.end()
   } else if (req.url.startsWith('/posts/') && req.method === 'DELETE') {
     const id = req.url.split('/')[2]
-    await Post.findByIdAndDelete(id)
-    res.writeHead(204, headers)
-    res.end()
+    try {
+      await Post.findByIdAndDelete(id)
+      res.writeHead(204, headers)
+      res.end()
+    } catch (error) {
+      res.writeHead(400, headers)
+      res.write(JSON.stringify({
+        status: 'failed',
+        message: error
+      }))
+      res.end()
+    }
   } else if (req.url.startsWith('/posts/') && req.method === 'PATCH') {
     const id = req.url.split('/')[2]
     req.on('end', async () => {
